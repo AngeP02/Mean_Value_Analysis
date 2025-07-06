@@ -1,7 +1,4 @@
 import copy
-import streamlit as st
-
-
 import pandas as pd
 import streamlit as st
 
@@ -30,7 +27,7 @@ def innerprint(num_stazioni, paginazione, num_utenti, probabilita, output_buffer
 
 def printproba(num_stazioni, num_utenti, probabilita, output_buffer):
     st.markdown("### Distribuzioni marginali delle stazioni")
-    output_buffer.write("----- Distribuzioni Marginali delle stazioni -----\n\n")
+    output_buffer.write("******************* Distribuzioni Marginali delle stazioni *******************\n\n")
     paginazione = 0
     while True:
         output_buffer.write("\n")
@@ -49,7 +46,7 @@ def printproba(num_stazioni, num_utenti, probabilita, output_buffer):
                 probabilita_queue[i][j] = probabilita_queue[i].get(j + 1, 0.0)
             probabilita_queue[i][num_utenti] = 0.0  # Warning: one server
     st.markdown("### Distribuzioni marginali delle code")
-    output_buffer.write("----- Distribuzioni Marginali delle code -----\n\n")
+    output_buffer.write("\n\n\n ******************* Distribuzioni Marginali delle code ******************* \n\n")
     paginazione = 0
     while True:
         output_buffer.write("\n")
@@ -61,7 +58,7 @@ def printproba(num_stazioni, num_utenti, probabilita, output_buffer):
             break
 
 
-def printresults(dati, output_buffer):
+def printresults(dati, output_buffer, tipo_risultato):
     num_utenti = dati['num_utenti']
     num_stazioni = dati['num_stazioni']
     throughput_sistema = dati['throughput_sistema']
@@ -70,15 +67,43 @@ def printresults(dati, output_buffer):
     throughput = dati['throughput']
     numero_medio_coda = dati['numero_medio_coda']
     tempo_medio_attesa_coda = dati['tempo_medio_attesa_coda']
-    probabilita = dati['probabilita']
+
 
     with st.container(border=True):
-        st.markdown(f"### **Risultati per {num_utenti} utenti**")
-        col1,col2 = st.columns(2)
+        st.markdown(f"#### **Soluzione {tipo_risultato}**")
+        st.write(f"Risultati per {num_utenti} utenti")
+
+        if tipo_risultato in ["Large (Metodo 1)", "Large (Metodo 2)"]:
+            num_iterazioni_large = dati['num_iterazioni']
+            st.write(f"Numero di iterazioni: {num_iterazioni_large}")
+
+        st.markdown("""
+        <style>
+            .stMetric {
+                background-color: #f0f2f6;
+                border-radius: 8px;
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                color: #336699;
+                font-size: 24px;
+            }
+            h4 {
+                color: #555555;
+                font-size: 20px;
+            }
+            .dataframe {
+                font-size: 14px;
+            }
+        </style>
+        """, unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
         with col1:
-            st.markdown(f"#### **Throughput del sistema:** {throughput_sistema:.5f}")
+            st.metric(label="Throughput del sistema", value=f"{throughput_sistema:.5f}")
+
         with col2:
-            st.markdown(f"#### **Tempo medio nel sistema:** {tempo_permanenza:.5f}")
+            st.metric(label="Tempo medio nel sistema", value=f"{tempo_permanenza:.5f}")
 
         header_tabella = (
             "| Stazione | % Occupazione | Throughput | Lunghezza coda | Ritardo in coda |\n"
@@ -89,13 +114,15 @@ def printresults(dati, output_buffer):
             righe_tabella += f"| {i:^7} | {utilizzazione[i]:>7.5f} | {throughput[i]:>10.5f} | {numero_medio_coda[i]:>12.5f} | {tempo_medio_attesa_coda[i]:>11.5f} |\n"
 
         st.markdown(header_tabella + "\n" + righe_tabella)
-
-        output_buffer.write(f"\n***********  RISULTATI per {num_utenti:3} UTENTI  *******************\n\n")
-        output_buffer.write(f"Throughput del sistema ..: {throughput_sistema:9.5f}\n")
-        output_buffer.write(f"Tempo medio nel sistema ..: {tempo_permanenza:9.5f}\n\n")
+        output_buffer.write(f"\n*********************************************************\n")
+        output_buffer.write(f"*                Soluzione {tipo_risultato}             *\n")
+        output_buffer.write(f"*********************************************************\n\n")
+        output_buffer.write(f"\n*******************  RISULTATI per {num_utenti:3} UTENTI  *******************\n\n")
+        output_buffer.write(f"Throughput del sistema : {throughput_sistema:9.5f}\n")
+        output_buffer.write(f"Tempo medio nel sistema : {tempo_permanenza:9.5f}\n\n")
         output_buffer.write("STAZIONE   %OCCUPAZIONE   THROUGHPUT   LUNGHEZZA CODA   RITARDO CODA\n")
         output_buffer.write("--------   ------------   ----------   --------------   ------------\n")
         for i in range(1, num_stazioni + 1):
-            output_buffer.write( f"{i:3}       {utilizzazione[i]:9.5f}     {throughput[i]:9.5f}     {numero_medio_coda[i]:9.5f}     {tempo_medio_attesa_coda[i]:9.5f}\n")
+            output_buffer.write( f"{i:3}       {utilizzazione[i]:9.5f}     {throughput[i]:9.5f}     {numero_medio_coda[i]:9.5f}     {tempo_medio_attesa_coda[i]:9.5f}\n\n\n\n")
 
-        printproba(num_stazioni, num_utenti, probabilita, output_buffer)
+        #printproba(num_stazioni, num_utenti, probabilita, output_buffer)

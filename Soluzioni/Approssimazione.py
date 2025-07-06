@@ -56,7 +56,7 @@ def approssimazione(output_buffer, dati_mva):
 
         for i in range(1, num_stazioni + 1):
             throughput[i] = num_medio_visite[i] * throughput_sistema
-            utilizzazione[i] = throughput[i] * tempo_medio_attesa[i] / (j + 1)          # j+1 = numero_medio_sistema[i] + 1
+            utilizzazione[i] = throughput[i] * tempi_servizio[i]
             numero_medio_sistema[i] = throughput[i] * tempo_medio_attesa[i]
             numero_medio_coda[i] = numero_medio_sistema[i] - utilizzazione[i]
             if throughput[i] == 0:
@@ -77,5 +77,5 @@ def approssimazione(output_buffer, dati_mva):
             'tempo_medio_attesa_coda': tempo_medio_attesa_coda,
             'probabilita': {}
         }
-
-    printresults(st.session_state['risultati_mva'], output_buffer=output_buffer)
+    tipo_risultato = "Approssimazione"
+    printresults(st.session_state['risultati_mva'], output_buffer, tipo_risultato)

@@ -11,7 +11,9 @@ def erlang(stazione, tempi_servizio, varianze, coefficienti_variazione):
     ordine = st.number_input(f'Valore ordine Erlang', min_value=1, step=1, key=f'kappa_{stazione}')
     if ordine > 0:
         varianze[stazione] = tempi_servizio[stazione] ** 2 / ordine
-        coefficienti_variazione[stazione] = varianze[stazione] / (tempi_servizio[stazione] ** 2)
+        #TODO Da vedere se è corretto il calcolo del coefficiente di variazione
+        #coefficienti_variazione[stazione] = varianze[stazione] / (tempi_servizio[stazione] ** 2)
+        coefficienti_variazione[stazione] = varianze[stazione]
         st.write(f"Distribuzione Erlang: varianza={varianze[stazione]:.5f}, CV²={coefficienti_variazione[stazione]:.5f}")
 
 def iperesponenziale(stazione, tempi_servizio_indipendenti, varianze, coefficienti_variazione, probabilita_branching, tasso_esponenziale1, tasso_esponenziale2):
