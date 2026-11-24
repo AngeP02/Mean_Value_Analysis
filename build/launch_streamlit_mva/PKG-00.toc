@@ -1,0 +1,97 @@
+('C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I ANNO\\SECONDO '
+ 'SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+ 'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\launch_streamlit_mva.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('launch_streamlit_mva',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\launch_streamlit_mva.py',
+   'PYSOURCE'),
+  ('python313.dll',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
+   'BINARY'),
+  ('unicodedata.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('libcrypto-3.dll',
+   'C:\\Users\\ANGELICA\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('base_library.zip',
+   'C:\\Users\\ANGELICA\\Desktop\\ANGELICA\\UNICAL\\MAGISTRALE\\I '
+   'ANNO\\SECONDO SEMESTRE\\PROCESSI ALEATORI E VALUTAZIONI DELLE '
+   'PRESTAZIONI\\MVA\\PYTHON\\build\\launch_streamlit_mva\\base_library.zip',
+   'DATA')],
+ 'python313.dll',
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
